@@ -8,11 +8,10 @@ use InvalidArgumentException;
 use Illuminate\Support\Manager;
 use Laravel\Socialite\Two\GithubProvider;
 use Laravel\Socialite\Two\GoogleProvider;
-use Laravel\Socialite\One\TwitterProvider;
 use Laravel\Socialite\Two\FacebookProvider;
+use Laravel\Socialite\Two\LaravelPassportProvider;
 use Laravel\Socialite\Two\LinkedInProvider;
 use Laravel\Socialite\Two\BitbucketProvider;
-use League\OAuth1\Client\Server\Twitter as TwitterServer;
 
 class SocialiteManager extends Manager implements Contracts\Factory
 {
@@ -41,6 +40,19 @@ class SocialiteManager extends Manager implements Contracts\Factory
         );
     }
 
+    /**
+     * Create an instance of the specified driver.
+     *
+     * @return \Laravel\Socialite\Two\AbstractProvider
+     */
+    protected function createLaravelPassportDriver()
+    {
+        $config = $this->app['config']['services.passport'];
+
+        return $this->buildProvider(
+            LaravelPassportProvider::class, $config
+        );
+    }
     /**
      * Create an instance of the specified driver.
      *
@@ -124,20 +136,6 @@ class SocialiteManager extends Manager implements Contracts\Factory
             $this->app['request'], $config['client_id'],
             $config['client_secret'], $this->formatRedirectUrl($config),
             Arr::get($config, 'guzzle', [])
-        );
-    }
-
-    /**
-     * Create an instance of the specified driver.
-     *
-     * @return \Laravel\Socialite\One\AbstractProvider
-     */
-    protected function createTwitterDriver()
-    {
-        $config = $this->app['config']['services.twitter'];
-
-        return new TwitterProvider(
-            $this->app['request'], new TwitterServer($this->formatConfig($config))
         );
     }
 
