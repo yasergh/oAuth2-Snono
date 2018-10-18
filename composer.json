@@ -1,12 +1,12 @@
 {
-    "name": "yasergh/oAuth2-Snono",
+    "name": "yasergh/oauth2-snono",
     "description": "Laravel wrapper around OAuth 2 libraries.",
     "keywords": ["oauth", "laravel"],
     "license": "MIT",
     "homepage": "https://laravel.com",
     "support": {
-        "issues": "https://github.com/yasergh/oAuth2-Snono/issues",
-        "source": "https://github.com/yasergh/oAuth2-Snono"
+        "issues": "https://github.com/yasergh/oauth2-snono/issues",
+        "source": "https://github.com/yasergh/oauth2-snono"
     },
     "authors": [
         {
