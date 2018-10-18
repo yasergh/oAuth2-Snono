@@ -5,13 +5,13 @@
     "license": "MIT",
     "homepage": "https://laravel.com",
     "support": {
-        "issues": "https://github.com/laravel/socialite/issues",
-        "source": "https://github.com/laravel/socialite"
+        "issues": "https://github.com/yasergh/oAuth2-Snono/issues",
+        "source": "https://github.com/yasergh/oAuth2-Snono"
     },
     "authors": [
         {
-            "name": "Taylor Otwell",
-            "email": "taylor@laravel.com"
+            "name": "Yaser Ghanawi",
+            "email": "yasergh74@gmail.com"
         }
     ],
     "require": {

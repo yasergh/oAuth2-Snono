@@ -1,4 +1,4 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-socialite.svg"></p>
+## oAuth2 Snono Package
 
 
 
@@ -17,3 +17,4 @@ Documentation for Socialite can be found on the [Laravel website](https://larave
 
 Laravel Socialite is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
  .
+Note: This project not tested.
